@@ -1,0 +1,43 @@
+.card {
+    width: 12rem;
+    height: 16.25rem;
+    padding: 1rem 0rem;
+    background-color: var(--backgroud);
+    border: solid 0.2rem var(--borderCard);
+    border-radius: 1rem;
+}
+
+.card-name {
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    color: var(--borderCard);
+    text-shadow: 0.2rem 0.2rem 0.4rem var(--black);
+}
+
+.card-img {
+    display: block;
+    margin: 0 auto;
+    width: 9rem;
+    height: 12rem;
+    border-radius: 1rem;
+}
+
+.card-front.hide {
+    display: none;
+}
+
+.card-back.hide {
+    display: none;
+}
+
+.card-back {
+    padding: 0rem 1rem;
+    line-height: 1.3rem;
+    color: var(--borderCard);
+}
+
+.card-back .card-name {
+    margin-bottom: 1rem;
+}

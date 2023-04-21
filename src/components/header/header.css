@@ -1,0 +1,19 @@
+.header-container {
+    padding: 1rem;
+    background-color: var(--black);
+    padding-bottom: 2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-bottom: solid 0.15rem var(--borderCard);
+}
+
+.header-title {
+    color: var(--borderCard);
+    text-align: center;
+    text-shadow: 0.2rem 0.2rem 0.4rem var(--borderCard);
+}
+
+@media (min-width: 768px) {
+    .header-title {
+        font-size: 3rem;
+    }
+}

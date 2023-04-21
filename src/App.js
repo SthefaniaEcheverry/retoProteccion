@@ -1,23 +1,27 @@
-import logo from './logo.svg';
+import { useEffect, useState } from 'react';
 import './App.css';
+import Card from './components/card/Card';
+import getHeroes from './utils/api/heroes';
+import Header from './components/header/Header';
+
 
 function App() {
+  const [heroesData, setHeroesData] = useState([]);
+  useEffect(() => {
+    const getData = async () => {
+      if (heroesData.length === 0) {
+        setHeroesData(await getHeroes(10))
+      }
+    }
+    getData();
+  }, [heroesData])
+  console.log(heroesData);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='app'>
+      <Header />
+      <main className='main'>
+        {heroesData.map(hero => <Card hero={hero} />)}
+      </main>
     </div>
   );
 }
